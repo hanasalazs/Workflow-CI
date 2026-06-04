@@ -27,9 +27,12 @@ def run_preprocessing_pipeline():
     le = LabelEncoder()
     for col in data.select_dtypes(include='object').columns:
         data[col] = le.fit_transform(data[col])
-        
+
+    # Menentukan path folder saat ini 
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.join(current_dir, "student_performance_preprocessed.csv")
+    
     # Simpan Hasil Bersih
-    output_path = "preprocessing/student_performance_preprocessed.csv"
     data.to_csv(output_path, index=False)
     print(f"Sukses! Dataset bersih disimpan di: {output_path}")
 

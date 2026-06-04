@@ -8,10 +8,10 @@ from sklearn.linear_model import LinearRegression
 def train_baseline():
     mlflow.autolog()
     
-    data_path = os.path.join("MLProject", "preprocessing", "student_performance_preprocessed.csv")
+    data_path = os.path.join("preprocessing", "student_performance_preprocessed.csv")
     
     if not os.path.exists(data_path):
-        data_path = os.path.join("preprocessing", "student_performance_preprocessed.csv")
+        data_path = os.path.join("MLProject", "preprocessing", "student_performance_preprocessed.csv")
 
     if os.path.exists(data_path):
         df = pd.read_csv(data_path)
