@@ -1,0 +1,45 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 2.19.0
+model_size_bytes: 1313
+model_uuid: 6c46ff4e043a40838c5bc92fc910fd3a
+run_id: 9d86c7761dcc44bb8d293c8491e94171
+signature:
+  inputs: '[{"type": "long", "name": "school", "required": true}, {"type": "long",
+    "name": "sex", "required": true}, {"type": "long", "name": "age", "required":
+    true}, {"type": "long", "name": "address", "required": true}, {"type": "long",
+    "name": "famsize", "required": true}, {"type": "long", "name": "Pstatus", "required":
+    true}, {"type": "long", "name": "Medu", "required": true}, {"type": "long", "name":
+    "Fedu", "required": true}, {"type": "long", "name": "Mjob", "required": true},
+    {"type": "long", "name": "Fjob", "required": true}, {"type": "long", "name": "reason",
+    "required": true}, {"type": "long", "name": "guardian", "required": true}, {"type":
+    "long", "name": "traveltime", "required": true}, {"type": "long", "name": "studytime",
+    "required": true}, {"type": "long", "name": "failures", "required": true}, {"type":
+    "long", "name": "schoolsup", "required": true}, {"type": "long", "name": "famsup",
+    "required": true}, {"type": "long", "name": "paid", "required": true}, {"type":
+    "long", "name": "activities", "required": true}, {"type": "long", "name": "nursery",
+    "required": true}, {"type": "long", "name": "higher", "required": true}, {"type":
+    "long", "name": "internet", "required": true}, {"type": "long", "name": "romantic",
+    "required": true}, {"type": "long", "name": "famrel", "required": true}, {"type":
+    "long", "name": "freetime", "required": true}, {"type": "long", "name": "goout",
+    "required": true}, {"type": "long", "name": "Dalc", "required": true}, {"type":
+    "long", "name": "Walc", "required": true}, {"type": "long", "name": "health",
+    "required": true}, {"type": "long", "name": "absences", "required": true}, {"type":
+    "long", "name": "G1", "required": true}, {"type": "long", "name": "G2", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2026-06-04 17:49:20.380045'
