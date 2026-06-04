@@ -29,13 +29,7 @@ def run_preprocessing_pipeline():
         data[col] = le.fit_transform(data[col])
         
     # Simpan Hasil Bersih
-    output_path = os.path.join("MLProject", "preprocessing", "student_performance_preprocessed.csv")
-
-    if not os.path.exists(os.path.dirname(output_path)) and os.path.exists("preprocessing"):
-        output_path = os.path.join("preprocessing", "student_performance_preprocessed.csv")
-    elif not os.path.exists(os.path.dirname(output_path)):
-        output_path = "student_performance_preprocessed.csv"
-
+    output_path = "preprocessing/student_performance_preprocessed.csv"
     data.to_csv(output_path, index=False)
     print(f"Sukses! Dataset bersih disimpan di: {output_path}")
 
