@@ -13,9 +13,9 @@ jobs:
     # actions/checkout@v3.6.0
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
     
-    # SHA ASLI & VALID untuk actions/setup-python@v4.7.1
+    # actions/setup-python@v4.8.0
     - name: Set up Python
-      uses: actions/setup-python@61a6322f8f9978415716ad36ac748c6a50e3defd
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c
       with:
         python-version: '3.10'
         
@@ -39,16 +39,16 @@ jobs:
     # actions/checkout@v3.6.0
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
 
-    # docker/login-action@v3.0.0
+    # docker/login-action@v3.3.0
     - name: Login to Docker Hub
-      uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d
+      uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # docker/build-push-action@v5.0.0
+    # docker/build-push-action@v6.3.0 
     - name: Build and push Docker image
-      uses: docker/build-push-action@0565240e2d4b7320b52563ea055d81e134ad0436
+      uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4
       with:
         context: ./MLProject
         push: true
