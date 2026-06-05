@@ -15,7 +15,7 @@ jobs:
     
     # SHA Resmi untuk actions/setup-python@v4.7.1 (Ini yang benar!)
     - name: Set up Python
-      uses: actions/setup-python@61a6322f8f9978415716ad36ac748c6a50e3defd
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
       with:
         python-version: '3.10'
         
